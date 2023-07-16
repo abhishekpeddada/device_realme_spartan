@@ -11,16 +11,20 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from spartan device
 $(call inherit-product, device/realme/spartan/device.mk)
 
-# Inherit some common DerpFest stuff.
-$(call inherit-product, vendor/derp/config/common_full_phone.mk)
+# Inherit some common Lineage stuff.
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-# Rom Stuff
-DERP_BUILDTYPE := Official
-EXTRA_UDFPS_ANIMATIONS := true
-USE_LEGACY_BOOTANIMATION := true
-TARGET_NOT_USES_BLUR := true
+#ROM Stuff
+RISING_CHIPSET := "snapdragon 870 5G"
+RISING_MAINTAINER := "Amrutesh"
+TARGET_BUILD_APERTURE_CAMERA := true
+TARGET_HAS_UDFPS := true
+WITH_GMS := true
+TARGET_CORE_GMS := true
 
-PRODUCT_NAME := derp_spartan
+
+
+PRODUCT_NAME := rising_spartan
 PRODUCT_DEVICE := spartan
 PRODUCT_MANUFACTURER := realme
 PRODUCT_BRAND := realme
