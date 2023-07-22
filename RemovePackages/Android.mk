@@ -20,7 +20,9 @@ LOCAL_OVERRIDES_PACKAGES := arcore \
     YouTube \
     YouTubeMusicPrebuilt \
     PixelWallpapers2021 \
-    PixelLiveWallpaperPrebuilt
+    PixelLiveWallpaperPrebuilt \
+    DerpSetupWizard \
+    Stk
 LOCAL_UNINSTALLABLE_MODULE := true
 LOCAL_CERTIFICATE := PRESIGNED
 LOCAL_SRC_FILES := /dev/null
