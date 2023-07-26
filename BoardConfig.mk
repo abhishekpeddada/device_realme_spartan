@@ -6,6 +6,9 @@
 
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+ALLOW_MISSING_DEPENDENCIES=true
+BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
+NEED_AIDL_NDK_PLATFORM_BACKEND := true
 
 DEVICE_PATH := device/realme/spartan
 
@@ -92,14 +95,8 @@ TARGET_SURFACEFLINGER_UDFPS_LIB := //hardware/oplus:libudfps_extension.oplus
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     $(DEVICE_PATH)/device_framework_matrix.xml \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
-    vendor/derp/config/device_framework_matrix.xml
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
-ODM_MANIFEST_FILES := $(DEVICE_PATH)/manifest_odm.xml
-ODM_MANIFEST_SKUS += nfc
-ODM_MANIFEST_NFC_FILES := \
-    $(DEVICE_PATH)/manifest_odm.xml \
-    $(DEVICE_PATH)/manifest-nfc.xml
 
 # Init
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_oplus
@@ -191,7 +188,6 @@ ENABLE_VENDOR_RIL_SERVICE := true
 VENDOR_SECURITY_PATCH := 2023-04-05
 
 # SEPolicy
-include device/qcom/sepolicy_vndr-legacy-um/SEPolicy.mk
 include hardware/oplus/sepolicy/qti/SEPolicy.mk
 
 # Touch
