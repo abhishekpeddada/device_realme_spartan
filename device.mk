@@ -324,11 +324,20 @@ PRODUCT_PACKAGES += \
     libOmxVenc \
     libstagefrighthw
 
+# OPlusExtras
+PRODUCT_PACKAGES += \
+    OPlusExtras 
+    
+
+# Overlays
+PRODUCT_PACKAGES += \
+    OPlusExtrasResTarget
+
 # Overlays
 $(call inherit-product, hardware/oplus/overlay/qssi/qssi.mk)
 
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-derp
+    $(LOCAL_PATH)/overlay-colt
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_PACKAGES += \
