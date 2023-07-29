@@ -113,6 +113,9 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.1-impl-qti.recovery \
     android.hardware.boot@1.1-service
 
+ # Camera
+$(call inherit-product-if-exists, vendor/oplus/camera/opluscamera.mk)
+
 # Camera
 PRODUCT_PACKAGES += \
     libcamera_metadata_shim
@@ -172,6 +175,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.3.vendor \
     android.hardware.drm-service.clearkey
+
+# Gms
+PRODUCT_PACKAGES += \
+    RemovePackagesGms    
 
 # fastbootd
 PRODUCT_PACKAGES += \

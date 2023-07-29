@@ -11,23 +11,28 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from spartan device
 $(call inherit-product, device/realme/spartan/device.mk)
 
-# Inherit some common DerpFest stuff.
-$(call inherit-product, vendor/derp/config/common_full_phone.mk)
+# Inherit some common colt stuff.
+$(call inherit-product, vendor/colt/config/common_full.mk)
 
-# Rom Stuff
-DERP_BUILDTYPE := Official
-EXTRA_UDFPS_ANIMATIONS := true
-USE_LEGACY_BOOTANIMATION := true
-TARGET_NOT_USES_BLUR := true
 
-PRODUCT_NAME := derp_spartan
+
+PRODUCT_NAME := colt_spartan
 PRODUCT_DEVICE := spartan
 PRODUCT_MANUFACTURER := realme
 PRODUCT_BRAND := realme
 PRODUCT_MODEL := realme GT Neo 3T
-
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_SUPPORTS_QUICK_TAP  := true
+EXTRA_FOD_ANIMATIONS := true
 PRODUCT_SYSTEM_NAME := RMX3371
 PRODUCT_SYSTEM_DEVICE := RE54E4L1
+
+# Gapps
+WITH_GAPPS := true
+
+
+
+COLT_BUILD_MAINTAINER := Amrutesh
 
 PRODUCT_GMS_CLIENTID_BASE := android-oppo
 
