@@ -7,20 +7,28 @@
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-
+$(call inherit-product-if-exists, vendor/oplus/camera/opluscamera.mk)
 # Inherit from spartan device
 $(call inherit-product, device/realme/spartan/device.mk)
 
 # Inherit some common DerpFest stuff.
-$(call inherit-product, vendor/derp/config/common_full_phone.mk)
+$(call inherit-product, vendor/superior/config/common.mk)
 
 # Rom Stuff
-DERP_BUILDTYPE := Official
-EXTRA_UDFPS_ANIMATIONS := true
-USE_LEGACY_BOOTANIMATION := true
-TARGET_NOT_USES_BLUR := true
+SYSTEM_OPTIMIZE_JAVA := true
+SYSTEMUI_OPTIMIZE_JAVA := true
+TARGET_FACEUNLOCK_SUPPORTED := true
+BUILD_WITH_GAPPS := true
+USE_QUICKPIC := true
+USE_MOTO_CALCULATOR := true
+USE_MOTO_CLOCK := true
+USE_DUCKDUCKGO := true
+TARGE_SUPPORTS_bLUR := true
+SUPERIOR_UDFPS_ANIMATIONS := true
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_INCLUDE_PIXEL_CHARGER := true
 
-PRODUCT_NAME := derp_spartan
+PRODUCT_NAME := superior_spartan
 PRODUCT_DEVICE := spartan
 PRODUCT_MANUFACTURER := realme
 PRODUCT_BRAND := realme

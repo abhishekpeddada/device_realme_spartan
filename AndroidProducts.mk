@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/derp_spartan.mk
+    $(LOCAL_DIR)/superior_spartan.mk
 
 COMMON_LUNCH_CHOICES := \
-    derp_spartan-user \
-    derp_spartan-userdebug \
-    derp_spartan-eng
+    superior_spartan-user \
+    superior_spartan-userdebug \
+    superior_spartan-eng
