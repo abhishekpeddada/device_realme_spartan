@@ -1,6 +1,7 @@
 # Display
 persist.sys.brightness.low.gamma=true
-
+# Maintainer
+ro.spos.maintainer=abhix202
 # Camera
 #Expose aux camera for below packages
 vendor.camera.aux.packagelist=android,com.oneplus.camera,com.oppo.camera,com.oppo.engineermode,com.oplus.camera
